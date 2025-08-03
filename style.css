@@ -112,7 +112,7 @@ p{
 
 .localizacao {
   position: absolute;
-  bottom: 20px;
+  bottom: 200px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -148,4 +148,66 @@ p{
   flex-direction: column;
   align-items: center;
   gap: 12px;
+}
+
+/* RESPONSIVO PARA TELAS MENORES */
+@media (max-width: 768px) {
+  .envelope-img {
+    width: 130px;
+  }
+
+  .aniversariante {
+    width: 180px;
+    height: 180px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  p {
+    font-size: 1rem;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .link-mapa {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+
+  .link-mapa i {
+    font-size: 1.2rem;
+  }
+
+  .localizacao {
+    bottom: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .envelope-img {
+    width: 100px;
+  }
+
+  .aniversariante {
+    width: 150px;
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .link-mapa {
+    flex-direction: column;
+    text-align: center;
+    gap: 4px;
+  }
 }
