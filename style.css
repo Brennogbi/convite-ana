@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+}
+
+/* TELA INICIAL */
+.tela-inicial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111;
+}
+
+h1{
+    color: white;
+    font-weight: 100;
+}
+
+p{
+    color: rgb(105, 105, 105);
+}
+
+.envelope-img {
+  width: 180px;
+  height: auto;
+  cursor: pointer;
+  animation: pulsarEnvelope 1s ease-in-out infinite;
+  transition: transform 0.3s;
+}
+
+@keyframes pulsarEnvelope {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+}
+
+
+.envelope-img:hover {
+  transform: scale(1.05);
+}
+
+/* CONVITE ABERTO */
+.convite {
+  opacity: 0;
+  pointer-events: none;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('img/fundo2.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  background-color: #000;
+  transition: opacity 1s ease;
+  transform: scale(0.95);
+}
+
+.convite.ativo {
+  opacity: 1;
+  pointer-events: auto;
+  animation: zoomIn 0.8s ease forwards;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* IMAGEM PRINCIPAL */
+.centro-convite {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aniversariante {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: subirDescer 4s ease-in-out infinite, brilhoDourado 3s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+@keyframes subirDescer {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes brilhoDourado {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 223, 0, 0.8), 0 0 40px rgba(255, 223, 0, 0.4);
+  }
+}
+
+.localizacao {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.link-mapa {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Source Sans 3", sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 8px 16px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.link-mapa:hover {
+  background-color: rgba(255, 215, 0, 0.2);
+  color: gold;
+}
+
+.link-mapa i {
+  color: #f54242;
+  font-size: 1.5rem;
+}
+
+
+.conteudo-inicial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}

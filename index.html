@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Convite</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- TELA INICIAL COM IMAGEM DO ENVELOPE -->
+  <div class="tela-inicial" id="telaInicial">
+  <div class="conteudo-inicial">
+    <h1>convite</h1>
+    <img
+      src="img/envelope.png"
+      alt="Envelope"
+      class="envelope-img"
+      onclick="abrirConvite()"
+    />
+    <p>toque para abri</p>
+  </div>
+</div>
+
+  <!-- CONVITE -->
+  <div class="convite" id="convite">
+    <div class="centro-convite">
+      <img class="aniversariante" src="img/logo2.png" alt="Aniversariante" />
+    </div>
+
+    <!-- LOCALIZAÇÃO -->
+    <div class="localizacao">
+      <a
+        href="https://www.google.com/local/place/fid/0x75ac5bf346973f3:0x1b8dc9a06785eeb1/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3DbKzwxIyXpPCwdCL0z-2jwg%26cb_client%3Dsearch.gws-prod.gps%26yaw%3D250.15273%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&ik=CAISFmJLend4SXlYcFBDd2RDTDB6LTJqd2c%3D&sa=X&ved=2ahUKEwiVvLmJkO-OAxWmqJUCHRJOCboQpx96BAg3EBE"
+        target="_blank"
+        class="link-mapa"
+      >
+        <i class="bi bi-geo-alt-fill"></i> Local no Mapa
+      </a>
+    </div>
+  </div>
+
+  <!-- MÚSICA DE FUNDO -->
+  <audio id="musicaFundo" src="music/anamusic.mp3" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
